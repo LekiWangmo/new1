@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>EmployeServices</title>
+    <style>
+      .dropbtn {
+        background-color: #c4bbaa;
+        color: rgb(0, 0, 0);
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: #cdc59a;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown a:hover {
+        background-color: #ddd;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="header">
+      <div class="logo">
+        <i class="ri-menu-line icon icon-0 menu"></i>
+        <h2>HEULWEN</h2>
+      </div>
+      <div class="search--notification--profile">
+        <div class="search">
+          <input type="text" placeholder="Search here" />
+          <button><i class="ri-search-2-line"></i></button>
+        </div>
+        <div class="notification--profile">
+          <div class="picon bell">
+            <i class="ri-notification-2-line"></i>
+          </div>
+          <div class="picon chat">
+            <i class="ri-user-line"></i>
+          </div>
+          <div class="picon profile">
+            <a href="profile.html"><img src="sangay.jpg" alt="" /></a>
+          </div>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Profile</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#home">Profile</a>
+              <a href="#about">Change Password</a>
+              <a href="#contact">Help</a>
+              <a href="">log Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main">
+      <div class="sidebar">
+        <ul class="sidebar--items">
+          <li>
+            <a href="dashboard.html" id="active--link">
+              <span class="icon icon-1"
+                ><i class="ri-layout-grid-line"></i
+              ></span>
+              <span class="sidebar--item">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="calender.html">
+              <span class="icon icon-2"
+                ><i class="ri-calendar-2-line"></i
+              ></span>
+              <span class="sidebar--item">Staff task and Tour</span>
+            </a>
+          </li>
+          <li>
+            <a href="emplyservice.html">
+              <span class="icon icon-3"><i class="ri-user-2-line"></i></span>
+              <span class="sidebar--item" style="white-space: nowrap"
+                >Employee Services</span
+              >
+              <!-- <select name="date" id="date" class="dropdown">
+                <option value="Inventory and Property">
+                  Inventory and Property
+                </option>
+                <option value="Leave Management">Leave Management</option>
+                <option value="Promotion and Resignation">
+                  Promotion and Resignation
+                </option>
+              </select> -->
+            </a>
+          </li>
+          <li>
+            <a href="human.html">
+              <span class="icon icon-5"
+                ><i class="ri-line-chart-line"></i
+              ></span>
+              <span class="sidebar--item">Human resourse and Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="rules.html">
+              <span class="icon icon-6"
+                ><i class="ri-customer-service-line"></i
+              ></span>
+              <span class="sidebar--item">Rules and Regulation</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar--bottom-items">
+          <li>
+            <a href="#">
+              <span class="icon icon-7"
+                ><i class="ri-settings-3-line"></i
+              ></span>
+              <span class="sidebar--item">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="login.html">
+              <span class="icon icon-8"
+                ><i class="ri-logout-box-r-line"></i
+              ></span>
+              <span class="sidebar--item"> Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main--content">
+        <div class="card">
+          <div class="card-title">
+            <h3><a href="#"> Paid and unpaid hotel services</a></h3>
+          </div>
+          <div class="card-body"></div>
+          <p>
+            When you plan your business, it is important to consider the kind of
+            services you are going to provide the clients with and if they are
+            paid or unpaid services. Besides, the owner of a hotel can provide
+            the other unpaid services at his own discretion, depending on
+            profitability, seasonality, competitive environment and other
+            factors...
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <h3><a href="#"> Hospitality Function </a></h3>
+          </div>
+          <div class="card-body"></div>
+          <p>
+            Hotels make up an important part of the hospitality and tourism
+            industry. As such, the actual function of a hotel lies not only in
+            providing a place for people to stay but creating an enjoyable
+            experience for guests and seeing to all their wants and needs...
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <h3><a href="#"> Operational and Guest-Facing Staff </a></h3>
+          </div>
+          <div class="card-body"></div>
+          <p>
+            The operational staff of a hotel includes all the people that work
+            in the different hotel departments such as food and beverage;
+            housekeeping; the front desk; the bar; and the restaurant. Staff
+            positions include chefs, cooks, dishwashers, guest room attendants,
+            laundry room attendants, room service waiters, porters, and customer
+            representatives that greet guests, guide them to their rooms, and
+            relay special requests to the front desk...
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <h3><a href="#"> Food and Beverage </a></h3>
+          </div>
+          <div class="card-body"></div>
+          <p>
+            food and beverage reigns supreme. It is the largest element of the
+            hospitality industry and can take the form of high-end restaurants,
+            fast-food eateries, catering establishments and many other
+            manifestations. The food and beverage trade can symbiotically
+            function as part of other businesses, such as in bowling alleys or
+            movie theaters. When your restaurant is part of a hotel, food and
+            beverage can dramatically enhance the overall guest experience by
+            offering excellent food and first-class customer service...
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <h3><a href="#"> Accommodations and Lodging </a></h3>
+          </div>
+          <div class="card-body"></div>
+          <p>
+            Hotels, bed and breakfast enterprises and other places offering
+            lodging represent a broad segment of the hospitality
+            industry.Travelers value thoughtful treatment and simple amenities.
+            When they feel appreciated and catered to, your guests will tell
+            others about their experience and may become repeat customers...
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <h3><a href="inventory.html"> Inventory and Property</a></h3>
+          </div>
+          <div class="card-body"></div>
+          <p>heulwen inventory and property</p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <h3><a href="leavee.html"> Leave Management</a></h3>
+          </div>
+          <div class="card-body"></div>
+          <p>Seek leave application</p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <h3><a href="promotion.html"> Promotion</a></h3>
+          </div>
+          <div class="card-body"></div>
+          <p>Heulwen's Promotion in every year.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <h3><a href="resign.html">Resignation</a></h3>
+          </div>
+          <div class="card-body"></div>
+          <p>Heulwen's resignation application</p>
+        </div>
+      </div>
+    </section>
+    <!-- the toggle -->
+    <script>
+      let menu = document.querySelector(".menu");
+      let sidebar = document.querySelector(".sidebar");
+      let mainContent = document.querySelector(".main--content");
+
+      menu.onclick = function () {
+        sidebar.classList.toggle("active");
+        mainContent.classList.toggle("active");
+      };
+    </script>
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

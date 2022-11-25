@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calender.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <title>Dashboard</title>
+    <style>
+      .dropbtn {
+        background-color: #c4bbaa;
+        color: rgb(0, 0, 0);
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: #cdc59a;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #d1c792;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown a:hover {
+        background-color: #ddd;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+    <style>
+      .icon {
+  cursor: pointer;
+  /* margin-right: 50px;
+  line-height: 60px; */
+}
+.icon span {
+  background: rgb(255, 255, 255);
+  padding: 7px;
+  border-radius: 50%;
+  color: rgb(0, 0, 0);
+  vertical-align: top;
+  margin-left: -25px;
+}
+
+.icon:hover {
+  opacity: 0.7;
+}
+
+
+.notifi-box {
+  width: 300px;
+  height: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 63px;
+  right: 35px;
+  /* transition: 1s opacity, 250ms height; */
+  box-shadow: 0 4px 8px 0 rgba(153, 152, 152, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.notifi-box h2 {
+  font-size: 14px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  color: rgb(255, 255, 255);
+}
+.notifi-box h2 span {
+  color: rgb(0, 0, 0);
+}
+.notifi-item {
+  background-color: #b9b5a6;
+  color: rgb(255, 255, 255);
+  display: flex;
+  border-bottom: 1px solid rgb(255, 219, 219);
+  padding: 15px 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.notifi-item:hover {
+  background-color: rgb(255, 255, 255);
+}
+.notifi-item img {
+  display: block;
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.notifi-item .text h4 {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  margin-top: 10px;
+}
+.notifi-item .text p {
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+}
+    </style>
+  </head>
+
+  <body>
+    <section class="header">
+      <div class="logo">
+        <i class="ri-menu-line icon icon-0 menu"></i>
+        <h4>HEULWEN</h2>
+      </div>
+      <div class="search--notification--profile">
+        <div class="search">
+          <input type="text" placeholder="Search here" />
+          <button><i class="ri-search-2-line"></i></button>
+        </div>
+        <div class="notification--profile">
+          <div class="icon" onclick="toggleNotifi()">
+          <div class="picon bell">
+            <i class="ri-notification-2-line"></i>
+            <!-- -- -->
+            <div>
+              </div>
+              <div class="notifi-box" id="box">
+                <h2>Notifications<span>10+</span></h2>
+                <div class="notifi-item">
+                  <div class="text">
+                    <h4>Tashi Phuntsho</h4>
+                    <p>Reseverd booking for family room</p>
+                  </div>
+                </div>
+        
+                <div class="notifi-item">
+                  <img src="img/avatar2.png" alt="img" />
+                  <div class="text">
+                    <h4>Sonam Dechen</h4>
+                    <p>Booking of 5 rooms</p>
+                  </div>
+                </div>
+        
+                <div class="notifi-item">
+                  <img src="img/avatar3.png" alt="img" />
+                  <div class="text">
+                    <h4>Leki wangmo</h4>
+                    <p>Booking conference hall for wedding</p>
+                  </div>
+                </div>
+        
+                <div class="notifi-item">
+                  <img src="img/avatar4.png" alt="img" />
+                  <div class="text">
+                    <h4>sanzin choden</h4>
+                    <p>Reseverd booking forroom</p>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+            <!-- -- -->
+          </div>
+          <div class="picon chat">
+            <i class="ri-user-line"></i>
+          </div>
+          <div class="picon profile">
+            <a href="profile.html"><img src="sangay.jpg" alt="" /></a>
+          </div>
+         
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Profile</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="profile.html">Profile</a>
+    <a href="#about">Change Password</a>
+    <a href="#contact">Help</a>
+    <a href="">log Out</a>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+    <section class="main">
+      <div class="sidebar">
+        <ul class="sidebar--items">
+          <li>
+            <a href="dashboard.html" id="active--link">
+              <span class="icon icon-1"
+                ><i class="ri-layout-grid-line"></i
+              ></span>
+              <span class="sidebar--item">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="calender.html">
+              <span class="icon icon-2"
+                ><i class="ri-calendar-2-line"></i
+              ></span>
+              <span class="sidebar--item">Staff task and Tour</span>
+            </a>
+          </li>
+          <li>
+            <a href="emplyservice.html">
+              <span class="icon icon-3"><i class="ri-user-2-line"></i></span>
+              <span class="sidebar--item" style="white-space: nowrap"
+                >Employee Services</span
+              >
+              <!-- <select name="date" id="date" class="dropdown">
+                <option value="Inventory and Property">
+                  Inventory and Property
+                </option>
+                <option value="Leave Management">Leave Management</option>
+                <option value="Promotion and Resignation">
+                  Promotion and Resignation
+                </option>
+              </select> -->
+            </a>
+          </li>
+          <li>
+            <a href="human.html">
+              <span class="icon icon-5"
+                ><i class="ri-line-chart-line"></i
+              ></span>
+              <span class="sidebar--item">Human resourse and Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="rules.html">
+              <span class="icon icon-6"
+                ><i class="ri-customer-service-line"></i
+              ></span>
+              <span class="sidebar--item">Rules and Regulation</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar--bottom-items">
+          <li>
+            <a href="#">
+              <span class="icon icon-7"
+                ><i class="ri-settings-3-line"></i
+              ></span>
+              <span class="sidebar--item">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="login.html">
+              <span class="icon icon-8"
+                ><i class="ri-logout-box-r-line"></i
+              ></span>
+              <span class="sidebar--item"> Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main--content">
+
+
+        <h4>Staff Task </h4>
+        <h6>1. Front Office</h6>
+        <p>-To oversee front desk operations and manage other front-office employees.
+           This can involve managing schedules, delegating specific tasks to different members of 
+           the team and taking overall responsibility for the customer experience. Training, coaching 
+           and hiring activities are also common.</p><br>
+
+           <h6>2. Guest Service</h6>
+<p>-Hotels may have a separate guest service manager, who takes responsibility for the various guest
+   services provided by the front office. In addition to overseeing core tasks, a guest service manager
+    is likely to be responsible for hiring, training, and otherwise managing reception staff, 
+    concierge staff, and others in similar roles.</p><br>
+
+<h6>3. Reservation</h6>
+<p>-A reservations manager takes control of activities and operations related to room reservations.
+   This includes managing bookings, cancellations and special requests from customers. It also requires 
+   coordination with the sales and marketing department, and an ability to deal with guests who arrive
+    and want a room without pre-booking.</p><br>
+
+<h6>4. Revenue</h6>
+<p>-Within the front office hotel department, a revenue manager is tasked with optimising revenue
+   generation and overall financial performance. </p><br>
+
+<h6>5. Night Audit</h6>
+<p>-Night auditing involves a variety of tasks, like ensuring that all administrative work has been 
+  handled over the course of the day, cash handling, and looking over billing information, in order 
+  to identify any potential issues. A night audit manager oversees all of this and helps to keep the hotel running smoothly.</p><br>
+
+<h6>6. Housekeeping</h6>
+<p>-Takes control of all activities related to cleaning rooms and providing a safe, clean and pleasant
+   environment for guests. They coordinate housekeeping staff, ensure all rooms are turned over on time 
+   and are also in charge of cleaning public areas of the hotel, such as restrooms and hallways.</p>
+   <div class="container-fluid position-relative d-flex">
+          <!-- Content Start -->
+          <div class="container-fluid">
+            <div class="bg-dark text-center rounded p-4">
+              <div
+                class="d-flex align-items-center justify-content-between text-light"
+              >
+                <h6 class="lg-0">HEULWEN's Calender</h6>
+              </div>
+              <div class="table-responsive">
+                <!-- (A) PERIOD SELECTOR -->
+                <div class="body">
+                  <div id="calPeriod">
+                    <select id="calMonth"></select>
+                    <input type="number" id="calYear" />
+                  </div>
+    
+                  <!-- (B) CALENDAR -->
+                  <div id="calWrap"></div>
+    
+                  <!-- (C) EVENT FORM -->
+                  <dialog id="calForm">
+                    <form method="dialog">
+                      <h2>CALENDAR EVENT</h2>
+                      <label>Date</label>
+                      <input type="text" id="evtDate" readonly />
+                      <label>Details</label>
+                      <textarea id="evtTxt" required></textarea>
+    
+                      <input id="evtClose" type="button" value="Close" />
+                      <input id="evtDel" type="button" value="Delete" />
+                      <input id="evtSave" type="submit" value="Save" />
+                    </form>
+                  </dialog>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Content End -->
+        </div><br>
+        <h4>Tour</h4>
+<p>Around-Us</p>
+<div class="tour">
+  <div class="tourpic">
+    <a href="#"><img src="h7.jpg" style="height:35rem" alt=""></a>
+  </div>
+
+  </div>
+
+
+        <!-- Template Javascript -->
+      </div>
+
+    </section>
+     <!-- the toggle -->
+     <script>
+      let menu = document.querySelector(".menu");
+      let sidebar = document.querySelector(".sidebar");
+      let mainContent = document.querySelector(".main--content");
+
+      menu.onclick = function () {
+        sidebar.classList.toggle("active");
+        mainContent.classList.toggle("active");
+      };
+    </script>
+     <script>
+      /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+    <script src="calendar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="human.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+ 
+
+    <title>leave application</title>
+    <style>
+      .dropbtn {
+        background-color: #c4bbaa;
+        color: rgb(0, 0, 0);
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: #cdc59a;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown a:hover {
+        background-color: #ddd;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="header">
+      <div class="logo">
+        <i class="ri-menu-line icon icon-0 menu"></i>
+        <h2>HEULWEN</h2>
+      </div>
+      <div class="search--notification--profile">
+        <div class="search">
+          <input type="text" placeholder="Search here" />
+          <button><i class="ri-search-2-line"></i></button>
+        </div>
+        <div class="notification--profile">
+          <div class="picon bell">
+            <i class="ri-notification-2-line"></i>
+          </div>
+          <div class="picon chat">
+            <i class="ri-user-line"></i>
+          </div>
+          <div class="picon profile">
+            <a href="profile.html"><img src="sangay.jpg" alt="" /></a>
+          </div>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Profile</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#home">Profile</a>
+              <a href="changepassword.html">Change Password</a>
+              <a href="#contact">Help</a>
+              <a href="login.html">log Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main">
+      <div class="sidebar">
+        <ul class="sidebar--items">
+          <li>
+            <a href="dashboard.html" id="active--link">
+              <span class="icon icon-1"
+                ><i class="ri-layout-grid-line"></i
+              ></span>
+              <span class="sidebar--item">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="calender.html">
+              <span class="icon icon-2"
+                ><i class="ri-calendar-2-line"></i
+              ></span>
+              <span class="sidebar--item">Staff task and Tour</span>
+            </a>
+          </li>
+          <li>
+            <a href="emplyservice.html">
+              <span class="icon icon-3"><i class="ri-user-2-line"></i></span>
+              <span class="sidebar--item" style="white-space: nowrap"
+                >Employee Services</span
+              >
+              <!-- <select name="date" id="date" class="dropdown">
+                <option value="Inventory and Property">
+                  Inventory and Property
+                </option>
+                <option value="Leave Management">Leave Management</option>
+                <option value="Promotion and Resignation">
+                  Promotion and Resignation
+                </option>
+              </select> -->
+            </a>
+          </li>
+          <li>
+            <a href="human.html">
+              <span class="icon icon-5"
+                ><i class="ri-line-chart-line"></i
+              ></span>
+              <span class="sidebar--item">Human resourse and Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="rules.html">
+              <span class="icon icon-6"
+                ><i class="ri-customer-service-line"></i
+              ></span>
+              <span class="sidebar--item">Rules and Regulation</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar--bottom-items">
+          <li>
+            <a href="#">
+              <span class="icon icon-7"
+                ><i class="ri-settings-3-line"></i
+              ></span>
+              <span class="sidebar--item">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="login.html">
+              <span class="icon icon-8"
+                ><i class="ri-logout-box-r-line"></i
+              ></span>
+              <span class="sidebar--item"> Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main--content">
+        <h6>Human Resourse and help</h6><hr>
+        <br><br>
+        <p><i> ***Please write correct and geniune reason from the list based on the request you are applying for.
+           Your leave will be approved by the authority based on the category you are applying. </i></p>
+           <br>
+           <br>
+        <div class="container1">
+            <h1>Request Help And Enquiry</h1>
+            <form id="signup" action="" method="get" onsubmit="event.preventDefault() ;" autocomplete="off">
+                <div class="row">
+                    <div class="col-1">
+                        <label >Employee ID : </label>
+                        
+                    </div>
+                    <div class="col-2">
+                        <input type="text" id="id" name="employeeid" placeholder="Employee ID"><br>
+                        <small font-weight="20px"></small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1">
+                        <label for="name"> Employee Name :* </label></br><label class="validation-error hide" id="nameValidationError">Name cannot be blank!</label>
+                        
+                    </div> 
+                    <div class="col-2">
+                        <input type="text" id="name" name="employeename" placeholder="Employee Name"><br>
+                        <small></small>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-1">
+                      <label > Email: </label>
+                      
+                  </div>
+                  <div class="col-2">
+                      <input type="email" id="date" name="email" placeholder="Employee Email"><br>
+                      <small font-weight="20px"></small>
+                  </div>
+              </div>
+                <div class="row">
+                  <div class="col-1">
+                      <label for="number">Phone No : </label>
+                      <small></small>
+                  </div>
+                  <div class="col-2">
+                      <input type="tel" id="phone" name="employeePhone" placeholder="+975-17890384">
+                      <small></small>
+                  </div>
+              </div>
+      
+          
+          <div class="row">
+              <div class="col-1">
+                  <label > Reason: </label>
+                  
+              </div>
+              <div class="col-2">
+                  <textarea type="textarea" id="message" name="message" placeholder="Message"></textarea>
+                  <small font-weight="20px"></small>
+              </div>
+          </div>
+      
+      
+      
+                <br>
+                <div class="row form-action-buttons" >
+                    <input type="submit" value="ADD">
+                </div>
+            </form>
+          </div>
+    
+          
+          <!-- partial -->
+          <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+          <script src="human.js"></script>
+          
+      </div>
+      </section>
+         <!-- the toggle -->
+    <script>
+      let menu = document.querySelector(".menu");
+      let sidebar = document.querySelector(".sidebar");
+      let mainContent = document.querySelector(".main--content");
+
+      menu.onclick = function () {
+        sidebar.classList.toggle("active");
+        mainContent.classList.toggle("active");
+      };
+    </script>
+     <script>
+      /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+      </body>
+      </html>

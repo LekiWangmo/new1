@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile</title>
+    <link rel="stylesheet" href="pp.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .dropbtn {
+        background-color: #c4bbaa;
+        color: rgb(0, 0, 0);
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: #cdc59a;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown a:hover {
+        background-color: #ddd;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="header">
+      <div class="logo">
+        <i class="ri-menu-line icon icon-0 menu"></i>
+        <h2>HEULWEN</h2>
+      </div>
+      <div class="search--notification--profile">
+        <div class="search">
+          <input type="text" placeholder="Search here" />
+          <button><i class="ri-search-2-line"></i></button>
+        </div>
+        <div class="notification--profile">
+          <div class="picon bell">
+            <i class="ri-notification-2-line"></i>
+          </div>
+          <div class="picon chat">
+            <i class="ri-user-line"></i>
+          </div>
+          <div class="picon profile" style="overflow: hidden">
+            <a href="profile.html"><img src="sangay.jpg" alt="" /></a>
+          </div>
+
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Profile</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#home">Profile</a>
+              <a href="#about">Change Password</a>
+              <a href="#contact">Help</a>
+              <a href="">log Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main">
+      <div class="sidebar">
+        <ul class="sidebar--items">
+          <li>
+            <a href="dashboard.html" id="active--link">
+              <span class="icon icon-1"
+                ><i class="ri-layout-grid-line"></i
+              ></span>
+              <span class="sidebar--item">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="calender.html">
+              <span class="icon icon-2"
+                ><i class="ri-calendar-2-line"></i
+              ></span>
+              <span class="sidebar--item">Staff task and Tour</span>
+            </a>
+          </li>
+          <li>
+            <a href="emplyservice.html">
+              <span class="icon icon-3"><i class="ri-user-2-line"></i></span>
+              <span class="sidebar--item" style="white-space: nowrap"
+                >Employee Services</span
+              >
+              <!-- <select name="date" id="date" class="dropdown">
+                <option value="Inventory and Property">
+                  Inventory and Property
+                </option>
+                <option value="Leave Management">Leave Management</option>
+                <option value="Promotion and Resignation">
+                  Promotion and Resignation
+                </option>
+              </select> -->
+            </a>
+          </li>
+          <li>
+            <a href="human.html">
+              <span class="icon icon-5"
+                ><i class="ri-line-chart-line"></i
+              ></span>
+              <span class="sidebar--item">Human resourse and Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="rules.html">
+              <span class="icon icon-6"
+                ><i class="ri-customer-service-line"></i
+              ></span>
+              <span class="sidebar--item">Rules and Regulation</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar--bottom-items">
+          <li>
+            <a href="#">
+              <span class="icon icon-7"
+                ><i class="ri-settings-3-line"></i
+              ></span>
+              <span class="sidebar--item">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="login.html">
+              <span class="icon icon-8"
+                ><i class="ri-logout-box-r-line"></i
+              ></span>
+              <span class="sidebar--item"> Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main--content">
+        <div class="container bootstrap snippets bootdey">
+          <div class="row">
+            <!-- BEGIN USER PROFILE -->
+            <div class="col-md-12">
+              <div class="grid profile">
+                <div
+                  class="grid-header"
+                  style="
+                    background-size: cover;
+                    background-color: rgb(218, 208, 181);
+                    color: #000000;
+                  "
+                >
+                  <div class="col-xs-2">
+                    <img
+                      src="sangay.jpg"
+                      class="img-circle"
+                      style="max-width: 80%; height: 12400%"
+                      alt="logo"
+                    />
+                  </div>
+                  <div class="col-xs-5 text-center">
+                    <h3>Leki Wangmo</h3>
+                    <p>@Lekiswang</p>
+                    <p>GEEKPROBIN: Manager</p>
+                    <p>Thimphu,Bhutan</p>
+                  </div>
+                  <div class="col-xs-3 text-right"></div>
+                </div>
+                <div class="grid-body">
+                  <ul class="nav nav-tabs">
+                    <li class="active">
+                      <a href="#profile" data-toggle="tab">Profile</a>
+                    </li>
+                    <li class="">
+                      <a href="#timeline" data-toggle="tab">Timeline</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content">
+                    <!-- BEGIN PROFILE -->
+                    <div class="tab-pane active" id="profile">
+                      <p class="lead">My Profile</p>
+                      <hr />
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p>
+                            <strong>Email:</strong>
+                            <a href="#">lekiswang@gmail.com</a>
+                          </p>
+                          <p>
+                            <strong>Website:</strong>
+                            <a href="#">lekiswang.com</a>
+                          </p>
+                          <p><strong>About:</strong>Manager</p>
+                          <p>
+                            <strong>Joined on:</strong> July 24<sup>th</sup>,
+                            2018
+                          </p>
+                          <p>
+                            <strong>Hobbies:</strong> Read books, Reseach
+                            internet, cook food and Beverage
+                          </p>
+                          <p>
+                            <strong>Skills:</strong>
+                            <span class="label label-warning">Managing</span>,
+                            <span class="label label-warning">ICT</span>,
+                            <span class="label label-warning">creative</span>,
+                            <span class="label label-warning">Honesty</span>
+                          </p>
+                        </div>
+
+                        <div class="col-md-6">
+                          <p><strong>Address:</strong>Thimphu, Bhutan</p>
+                          <p><strong>Phone:</strong>17882444</p>
+                          <p><strong>Phone + Ext:</strong>1799752</p>
+                          <p>
+                            <strong>Reputation:</strong>
+                            <span class="text-green"
+                              ><i class="fa fa-angle-up"></i> 15000</span
+                            >
+                          </p>
+                          <p>
+                            <strong>Rating:</strong>
+                            <span class="text-yellow"
+                              ><i class="fa fa-star"></i
+                              ><i class="fa fa-star"></i
+                              ><i class="fa fa-star"></i
+                              ><i class="fa fa-star"></i
+                              ><i class="fa fa-star-half-o"></i
+                            ></span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END PROFILE -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END USER PROFILE -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- the toggle -->
+    <script>
+      let menu = document.querySelector(".menu");
+      let sidebar = document.querySelector(".sidebar");
+      let mainContent = document.querySelector(".main--content");
+
+      menu.onclick = function () {
+        sidebar.classList.toggle("active");
+        mainContent.classList.toggle("active");
+      };
+    </script>
+    <script>
+      /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript"></script>
+  </body>
+</html>

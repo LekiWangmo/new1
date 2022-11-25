@@ -1,0 +1,56 @@
+body {
+  margin-top: 20px;
+  /* background-color: rgb(245, 235, 219); */
+}
+
+.main {
+  padding: 150px;
+  font-family: "Times New Roman", Times, serif;
+}
+.topbar {
+  /* background-color: azure; */
+  overflow: hidden;
+}
+.topbar a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 20px 26px;
+  text-decoration: none;
+  font-size: 26px;
+}
+.sidebar {
+  background-color: whitesmoke;
+  color: black;
+  height: 100%;
+}
+
+.sidebar a {
+  margin-left: 10px;
+  display: block;
+  color: black;
+  padding-bottom: 10px;
+  font-size: 30px;
+  text-decoration: none;
+}
+/* .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+} */
+/* .container {
+  float: left;
+} */
+.card-bodyy {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+img {
+  width: 22%;
+  border-radius: 50%;
+  height: 270px;
+}
+.content {
+  background-color: whitesmoke;
+}

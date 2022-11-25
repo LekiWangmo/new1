@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Dashboard</title>
+    <style>
+      .dropbtn {
+        background-color: #c4bbaa;
+        color: rgb(0, 0, 0);
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: #cdc59a;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown a:hover {
+        background-color: #ddd;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="header">
+      <div class="logo">
+        <i class="ri-menu-line icon icon-0 menu"></i>
+        <h2>HEULWEN</h2>
+      </div>
+      <div class="search--notification--profile">
+        <div class="search">
+          <input type="text" placeholder="Search here" />
+          <button><i class="ri-search-2-line"></i></button>
+        </div>
+        <div class="notification--profile">
+          <div class="picon bell">
+            <i class="ri-notification-2-line"></i>
+          </div>
+          <div class="picon chat">
+            <i class="ri-user-line"></i>
+          </div>
+          <div class="picon profile">
+            <a href="info.html"><img src="sangay.jpg" alt="" /></a>
+          </div>
+       
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Profile</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="pp.html">Profile</a>
+              <a href="#about">Change Password</a>
+              <a href="#contact">Help</a>
+              <a href="login.html">log Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="main">
+      <div class="sidebar">
+        <ul class="sidebar--items">
+          <li>
+            <a href="dashboard.html" id="active--link">
+              <span class="icon icon-1"
+                ><i class="ri-layout-grid-line"></i
+              ></span>
+              <span class="sidebar--item">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="calender.html">
+              <span class="icon icon-2"
+                ><i class="ri-calendar-2-line"></i
+              ></span>
+              <span class="sidebar--item">Staff task and Tour</span>
+            </a>
+          </li>
+          <li>
+            <a href="emplyservice.html">
+              <span class="icon icon-3"><i class="ri-user-2-line"></i></span>
+              <span class="sidebar--item" style="white-space: nowrap"
+                >Employee Services</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="human.html">
+              <span class="icon icon-5"
+                ><i class="ri-line-chart-line"></i
+              ></span>
+              <span class="sidebar--item">Human resourse and Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="rules.html">
+              <span class="icon icon-6"
+                ><i class="ri-customer-service-line"></i
+              ></span>
+              <span class="sidebar--item">Rules and Regulation</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar--bottom-items">
+          <li>
+            <a href="#">
+              <span class="icon icon-7"
+                ><i class="ri-settings-3-line"></i
+              ></span>
+              <span class="sidebar--item">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="login.html">
+              <span class="icon icon-8"
+                ><i class="ri-logout-box-r-line"></i
+              ></span>
+              <span class="sidebar--item"> Logout</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main--content">
+      <div class="rule">
+        <div class="head">
+          <h3>Rules and Regulations</h3>
+          <hr>
+        </div>
+        <br>
+
+    <div><h3>Hotel Rules And Management policies</h4><br>
+        <div><p>-In Order to make your stay as pleasant as possible, 
+            the Management requests your co-operation in observing the following as 
+            an agreement between the guest and the " Mention your Hotel Name here" 
+            (hereinafter called 'Management') under which rooms are permitted to be used by the guest(s):-<p><br>
+                <p>1. Tariff-
+                    The tariff is for the room only and is exclusive of any government taxes applicable Meals
+                     and other services are available at extra cost. To know your room tariff, please contact
+                      the Duty Manager, guest registration forms must be signed on arrivals.</p><br>
+                <p>2. Settlement Of Bills
+                    Bills must be settled on presentation, personal cheques are not accepted.</p><br>
+                <p>3. Company's Lien On Guest's Luggage And Belongings-
+
+                    In the case of default in the payment of dues by a guest, the management shall have the linen on their
+                     luggage and belongings, and be entitled to detain the same and to sell or auction such property at any 
+                     time without reference to the guest. The net sale proceeds will be appropriate towards the amount due
+                      by the guest without prejudice to the management's rights to adopt such further recovery proceedings as my be required.</p><br>
+            
+              <p>4. Check-in -
+                Please present your ID card, Passport or Temporary Residence Card upon Check-in.
+                 By Law visitors must present personal documents for hotel records. These documents will be returned upon departure.</p><br>
+             <p>5. Departure-
+
+                Check out time is ( mention your checkout time here ) please inform the reception if you wish to retain your room beyond this time. 
+                The extension will be given depending on the availability. If the room is available, the norma
+                l tariff will be charged. On failure of the guest to vacate the room on expiry or period the management
+                 shall have the right to remove the guest and his/her belongings from the room occupied by the Guest.</p><br>
+
+            <p>6. Luggage Storage-
+
+                Subject to availability of the storage space, the guest can store luggage in the luggage room, 
+                at the guest's sole risk as to loss or damage from any cause, Luggage may not be stored for a period of over 30 days.</p><br>
+
+            <p>7. Pets-
+
+                Mention your policy for Pets ( allowed or not- allowed ) / (Allow us to make separate arrangements. )</p><br>
+            <p>8. Hazardous Goods- Gambling, contraband, prostitution, weapons, explosives, flammable objects, poisons, drugs,
+                 animals and pungent food are strictly prohibited on hotel premises.</p><br>
+
+            <p>9. Damage to Property-
+
+                The guest will be held responsible for any loss or damage to the hotel property caused by themselves, 
+                their guests or any person for whom they are responsible.</p><br>
+            <p>10. Government rules and regulations and application of laws-
+
+                Guest are requested to observe, abide by confirm to and be bound by all 
+                applicable acts and laws and Government rules and regulations in force from time to time.</p><br>
+            <p>11. Photographs and Video's-
+
+                Using photographs and video's taken in the hotel for commercial or
+                 public purposes is illegal. Those who do so will be subject to prosecution.</p><br>
+            </div>
+
+      </div>
+    </section>
+       <!-- the toggle -->
+       <script>
+        let menu = document.querySelector(".menu");
+        let sidebar = document.querySelector(".sidebar");
+        let mainContent = document.querySelector(".main--content");
+  
+        menu.onclick = function () {
+          sidebar.classList.toggle("active");
+          mainContent.classList.toggle("active");
+        };
+      </script>
+         <script>
+          /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+    
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function (event) {
+            if (!event.target.matches(".dropbtn")) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains("show")) {
+                  openDropdown.classList.remove("show");
+                }
+              }
+            }
+          };
+        </script>
+  </body>
+</html>

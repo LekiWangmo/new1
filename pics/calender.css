@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+}
+
+.header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #f1f1f1;
+  background-color: #c4bbaa;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  padding-left: 40px;
+}
+
+/* .logo {
+  background-color: burlywood;
+} */
+.logo span {
+  color: #9f9f9f;
+}
+
+.search--notification--profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 300px);
+  padding: 0 40px;
+}
+
+.search {
+  background-color: #f1f4f8;
+  border-radius: 50px;
+  width: 400px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  text-indent: 15px;
+  width: 85%;
+}
+
+.search button {
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search button i {
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+.notification--profile {
+  display: flex;
+  align-items: center;
+}
+
+.picon {
+  margin-left: 20px;
+  font-size: 1.1rem;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.lock {
+  color: #5073fb;
+  background-color: rgba(80, 115, 251, 0.2);
+}
+
+.bell {
+  color: #000000;
+  background-color: rgba(241, 210, 67, 0.2);
+}
+
+.chat {
+  color: #000000;
+  background-color: rgba(149, 255, 204, 0.2);
+}
+
+.profile {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+}
+
+/* sidebar */
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 280px;
+  background-color: #c4bbaa;
+  color: black;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 2px solid #f1f1f1;
+  transition: 0.3s;
+}
+
+.sidebar.active {
+  width: 103px;
+  overflow: hidden;
+}
+
+.sidebar.active .sidebar--item {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sidebar--items a,
+.sidebar--bottom-items a {
+  display: flex;
+  /* align-items: center; */
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  padding: 2px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-left: -20px;
+}
+
+.sidebar--items a:hover,
+.sidebar--bottom-items a:hover {
+  background-color: whitesmoke;
+  color: rgb(0, 0, 0);
+}
+
+#active--link {
+  /* background-color: rgb(166, 116, 72); */
+  color: rgb(0, 0, 0);
+}
+
+.sidebar--bottom-items li:last-child a {
+  margin-bottom: 0;
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  font-size: 1.3rem;
+}
+
+.icon-0 {
+  color: #000000;
+  border-radius: 1px solid black;
+}
+
+.icon-1 {
+  color: #000000;
+  border-radius: 3px solid black;
+}
+
+.icon-2 {
+  color: #000000;
+}
+
+.icon-3 {
+  color: #000000;
+}
+
+.icon-4 {
+  color: #000000;
+}
+
+.icon-5 {
+  color: #000000;
+}
+
+.icon-6 {
+  color: #000000;
+}
+
+.icon-7 {
+  color: #000000;
+}
+
+.icon-8 {
+  color: #000000;
+}
+.dropdownn {
+  outline: none;
+  border: none;
+  background-color: #c4bbaa;
+  border-radius: 0px;
+  width: 100px;
+  padding: 5px;
+}
+
+.main--content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: calc(100% - 300px);
+  padding: 0 40px;
+  overflow-y: scroll;
+  transition: 0.3s;
+}
+
+.main--content.active {
+  width: calc(100% - 103px);
+}
+
+/* (A) ENTIRE PAGE */
+
+:root {
+  --bg-color-a: #faf2ae; /* page header + form label */
+  --bg-color-b: #7c7466; /* calendar header */
+  --bg-color-c: #7e7d76; /* buttons */
+}
+.hide {
+  display: none !important;
+}
+
+/* (B) PERIOD SELECTOR */
+#calPeriod {
+  padding: 15px;
+  background: var(--bg-color-a);
+}
+#calPeriod input,
+#calPeriod select {
+  font-size: 24px;
+  border: 0;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background: 0;
+  cursor: pointer;
+}
+#calPeriod option {
+  color: #000;
+}
+#calYear {
+  width: 100px;
+  margin-left: 10px;
+}
+
+/* (C) CALENDAR */
+/* (C1) SHARED */
+.calHead,
+.calRow {
+  display: flex;
+}
+.calCell {
+  width: 14.2857%;
+}
+
+/* (C2) HEADER - DAY NAMES */
+.calHead .calCell {
+  color: rgb(0, 0, 0);
+  background: var(--bg-color-b);
+  font-weight: 700;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* (C3) BODY - INDIVIDUAL DAYS */
+.calBlank {
+  background: #eee;
+}
+.calToday {
+  background: #feffd3;
+}
+.calToday .cellDate {
+  color: #ff9b9b;
+}
+.calBody .calCell {
+  border: 1px solid #f5f5f5;
+  min-height: 80px;
+}
+.cellDate,
+.evt {
+  padding: 5px;
+}
+.cellDate {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b5b5b5;
+}
+.evt {
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* (D) EVENT FORM */
+#calForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+#calForm:is([open]) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#calForm form {
+  width: 450px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+}
+#calForm h2 {
+  margin: 0 0 15px 0;
+}
+#calForm label,
+#calForm input[type="text"],
+#calForm textarea {
+  width: 100%;
+}
+#calForm label {
+  color: #a1a1a1;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+#calForm input[type="text"],
+#calForm textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(255, 245, 245);
+  background: #f5f5f5;
+}
+#calForm textarea {
+  height: 50px;
+}
+#calForm input[type="button"],
+#calForm input[type="submit"] {
+  border: 0;
+  padding: 10px;
+  margin: 10px 2px 0 0;
+  color: #fff;
+  background: var(--bg-color-c);
+  cursor: pointer;
+}
+.body {
+  width: 100%;
+}
+.tour {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.tourpic {
+  height: 100px;
+  width: 50%;
+}

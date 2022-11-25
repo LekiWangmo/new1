@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HOTEL GP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="hotel1.css" />
+    <script
+      src="https://kit.fontawesome.com/dbed6b6114.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="images/logo.png" type="image/png" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header" id="header">
+      <div class="head-top">
+        <div class="site-name">
+          <span>HEULWEN</span>
+        </div>
+        <div class="site-nav">
+          <span id="nav-btn">MENU <i class="fas fa-bars"></i></span>
+        </div>
+      </div>
+
+      <div class="head-bottom flex">
+        <h2>NICE AND COMFORTABLE PLACE TO STAY</h2>
+        <p>
+          The best way to discover the heritage and hospitality of this colorful
+          Himalayan Kingdom is to journey through it.
+        </p>
+        <button type="button" class="head-btn">
+          <a href="login.html">LOG IN</a>
+        </button>
+      </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- side navbar -->
+    <div class="sidenav" id="sidenav">
+      <span class="cancel-btn" id="cancel-btn">
+        <i class="fas fa-times"></i>
+      </span>
+
+      <ul class="navbar">
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#header">home</a></li>
+        <li><a href="#services">services</a></li>
+        <li><a href="#rooms">rooms</a></li>
+        <li><a href="#customers">customers</a></li>
+      </ul>
+      <!-- <button class="btn sign-up"></button>
+      <button class="btn log-in"></button> -->
+    </div>
+    <!-- end of side navbar -->
+
+    <!-- end of body content -->
+    <section>
+      <div class="book">
+        <form class="book-form">
+          <div class="form-item">
+            <label for="checkin-date">Check In Date: </label>
+            <input type="date" id="chekin-date" />
+          </div>
+          <div class="form-item">
+            <label for="checkout-date">Check Out Date: </label>
+            <input type="date" id="chekout-date" />
+          </div>
+          <div class="form-item">
+            <label for="adult">Adults: </label>
+            <input type="number" min="1" value="1" id="adult" />
+          </div>
+          <div class="form-item">
+            <label for="children">Children: </label>
+            <input type="number" min="1" value="1" id="children" />
+          </div>
+          <div class="form-item">
+            <label for="rooms">Rooms: </label>
+            <input type="number" min="1" value="1" id="rooms" />
+          </div>
+          <div class="form-item">
+            <input type="submit" class="btn" value="Click on for more" />
+          </div>
+        </form>
+      </div>
+    </section>
+    <hr />
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div>
+          <h2>About Us</h2>
+          <p>
+            Located right in the top of city, the hotel is the international
+            chain’s first foray into the country and is the largest
+            internationally-branded hotel in Bhutan too, with 83 guest rooms and
+            suites. Drawing inspiration from the beloved national folktale of
+            the Four Harmonious Friends.
+          </p>
+          <ul class="social-icons">
+            <li class="flex">
+              <i class="fa fa-twitter fa-2x"></i>
+            </li>
+            <li class="flex">
+              <i class="fa fa-facebook fa-2x"></i>
+            </li>
+            <li class="flex">
+              <i class="fa fa-instagram fa-2x"></i>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Services</h2>
+          <a href="#">Blog</a>
+          <a href="#">Rooms</a>
+          <a href="#">Subscription</a>
+          <a href="#">Gift Card</a>
+        </div>
+
+        <div>
+          <h2>Privacy</h2>
+          <a href="#">Career</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Services</a>
+        </div>
+
+        <div>
+          <h2>Have A Question</h2>
+          <div class="contact-item">
+            <span>
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <span> 203 Fake St.Mountain View, Thimphu, BHUTAN </span>
+          </div>
+          <div class="contact-item">
+            <span>
+              <i class="fas fa-phone-alt"></i>
+            </span>
+            <span> +975-17890384</span>
+          </div>
+          <div class="contact-item">
+            <span>
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span> greekprobin@gmail.com </span>
+          </div>
+        </div>
+      </div>
+      <div class="last">
+        <p>ALL Right reserved by &copy;ourhotel 2022</p>
+      </div>
+
+      <div></div>
+    </footer>
+    <!-- end of footer -->
+
+    <script src="script.js"></script>
+     
+  </body>
+</html>
